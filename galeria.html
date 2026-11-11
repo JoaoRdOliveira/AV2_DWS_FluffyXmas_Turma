@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluffy Xmas | Galeria</title>
+    <!-- Fontes do Google Fonts: Mountains of Christmas (títulos) e Nunito (textos) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo-link">
+            <img class="logo-header" src="img/logo.png" alt="Logotipo da Fluffly Xmas">
+        </a>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="carrinho.html">Carrinho (<span id="qtd-carrinho">0</span>)</a>
+            <a href="galeria.html" class="nav-ativo">Galeria</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Galeria Fluffly Xmas</h1>
+
+        <!-- Contagem regressiva até o Natal (JavaScript: seção CONTAGEM REGRESSIVA) -->
+        <section class="contagem">
+            <h2>Falta pouco para o Natal!</h2>
+            <div class="relogio">
+                <div><strong id="contagem-dias">0</strong><span>dias</span></div>
+                <div><strong id="contagem-horas">0</strong><span>horas</span></div>
+                <div><strong id="contagem-minutos">0</strong><span>minutos</span></div>
+                <div><strong id="contagem-segundos">0</strong><span>segundos</span></div>
+            </div>
+            <p id="mensagem-contagem"></p>
+
+            <aside class="aviso-desconto">
+                <p><strong>Aviso:</strong> nos dias 24 e 25 de dezembro toda a loja fica com 40% de desconto!</p>
+            </aside>
+        </section>
+
+        <!-- Fotos criadas pelo JavaScript a partir das imagens dos produtos (seção GALERIA) -->
+        <section class="galeria">
+            <h2>Nossas pelúcias</h2>
+            <p>Clique em uma foto para ampliar.</p>
+            <div id="lista-galeria" class="grade-galeria"></div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape-blocos">
+            <div class="rodape-bloco">
+                <h2>Fluffly Xmas</h2>
+                <p>Pelúcias que aquecem o seu Natal</p>
+            </div>
+
+            <nav class="rodape-bloco" aria-label="Menu do rodapé">
+                <h2>Navegação</h2>
+                <a href="index.html">Início</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="carrinho.html">Carrinho</a>
+                <a href="galeria.html">Galeria</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+
+            <div class="rodape-bloco">
+                <h2>Contato</h2>
+                <p><strong>Endereço:</strong> R. Duende Verde, Polo Norte</p>
+                <p><strong>Telefone:</strong> 19 40028922</p>
+                <p><strong>WhatsApp:</strong> 19 940028922</p>
+                <p><strong>Instagram:</strong> @FluffyXmasStore</p>
+            </div>
+        </div>
+
+        <p class="rodape-direitos">&copy; 2026 Fluffly Xmas</p>
+    </footer>
+
+    <!-- Lightbox: janela que mostra a imagem ampliada. Fica escondida até uma foto ser clicada -->
+    <div id="lightbox" class="lightbox">
+        <button id="fechar-lightbox" class="fechar-lightbox">Fechar ×</button>
+        <img id="imagem-ampliada" src="" alt="">
+        <p id="legenda-lightbox"></p>
+    </div>
+
+    <!-- A ordem importa: produtos.js (os dados) vem antes de script.js -->
+    <script src="js/produtos.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

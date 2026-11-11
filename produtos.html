@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluffy Xmas | Produtos</title>
+    <!-- Fontes do Google Fonts: Mountains of Christmas (títulos) e Nunito (textos) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo-link">
+            <img class="logo-header" src="img/logo.png" alt="Logotipo da Fluffly Xmas">
+        </a>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="produtos.html" class="nav-ativo">Produtos</a>
+            <a href="carrinho.html">Carrinho (<span id="qtd-carrinho">0</span>)</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Nossos produtos</h1>
+
+        <!-- Busca e filtro (JavaScript: seção FILTRO E BUSCA).
+             A barra de valor só aparece quando "Valor" é escolhido. -->
+        <section class="filtros">
+            <label for="busca">Buscar produto</label>
+            <input type="text" id="busca" placeholder="Digite o nome do produto...">
+
+            <label for="categoria">Filtrar por</label>
+            <select id="categoria">
+                <option value="todas">Todos os produtos</option>
+                <option value="destaques">Destaques</option>
+                <option value="promocao">Promoção</option>
+                <option value="animais">Animais</option>
+                <option value="valor">Valor (até X)</option>
+            </select>
+
+            <!-- Barra de valor: o JavaScript define o menor e o maior preço dos produtos -->
+            <div id="filtro-valor" class="filtro-valor" hidden>
+                <label for="valor-maximo">Valor até: <strong id="valor-selecionado"></strong></label>
+                <input type="range" id="valor-maximo" step="1">
+                <div class="limites-valor">
+                    <span id="valor-minimo"></span>
+                    <span id="valor-maior"></span>
+                </div>
+            </div>
+
+            <p id="contador"></p>
+        </section>
+
+        <!-- Os cards são criados pelo JavaScript (js/script.js, seção CARDS DE PRODUTOS) -->
+        <section id="lista-produtos" class="grade-produtos"></section>
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape-blocos">
+            <div class="rodape-bloco">
+                <h2>Fluffly Xmas</h2>
+                <p>Pelúcias que aquecem o seu Natal</p>
+            </div>
+
+            <nav class="rodape-bloco" aria-label="Menu do rodapé">
+                <h2>Navegação</h2>
+                <a href="index.html">Início</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="carrinho.html">Carrinho</a>
+                <a href="galeria.html">Galeria</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+
+            <div class="rodape-bloco">
+                <h2>Contato</h2>
+                <p><strong>Endereço:</strong> R. Duende Verde, Polo Norte</p>
+                <p><strong>Telefone:</strong> 19 40028922</p>
+                <p><strong>WhatsApp:</strong> 19 940028922</p>
+                <p><strong>Instagram:</strong> @FluffyXmasStore</p>
+            </div>
+        </div>
+
+        <p class="rodape-direitos">&copy; 2026 Fluffly Xmas</p>
+    </footer>
+
+    <!-- A ordem importa: produtos.js (os dados) vem antes de script.js -->
+    <script src="js/produtos.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

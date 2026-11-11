@@ -1,0 +1,677 @@
+/* ========================================
+   VARIÁVEIS (cores da identidade natalina)
+   ======================================== */
+:root {
+    --vermelho: #B3202A;
+    --verde: #1F5D3A;
+    --dourado: #C9A227;
+    --neve: #FFFFFF;
+    --creme: #FBF6EA;
+    --noite: #12263F;
+
+    /* Fontes (importadas do Google Fonts em cada página) */
+    --fonte-titulo: "Mountains of Christmas", Georgia, serif;
+    --fonte-texto: "Nunito", Arial, sans-serif;
+}
+
+/* ========================================
+   BASE
+   ======================================== */
+/* O navegador coloca uma margem de 8px ao redor da página.
+   Zerando, o cabeçalho, o banner e o rodapé vão de uma ponta à outra da tela.
+   Aqui também ficam a fonte e a cor do texto de todo o site. */
+body {
+    margin: 0;
+    font-family: var(--fonte-texto);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--noite);
+}
+
+/* Botões e campos de formulário não herdam a fonte sozinhos */
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+/* Títulos usam a fonte natalina */
+h1,
+h2,
+h3 {
+    font-family: var(--fonte-titulo);
+    line-height: 1.2;
+}
+
+h1 {
+    margin: 1.5rem 1rem 0.5rem;
+    font-size: 2.75rem;
+    text-align: center;
+    color: var(--vermelho);
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+/* ========================================
+   CABEÇALHO (logo e menu)
+   ======================================== */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    background-color: var(--noite);
+    border-bottom: 3px solid var(--dourado);
+}
+
+.logo-header {
+    display: block;
+    height: 60px;
+    width: auto;
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+header nav a {
+    font-weight: bold;
+    color: var(--neve);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header nav a:hover,
+header nav a:focus {
+    color: var(--dourado);
+}
+
+/* Página ativa: sublinhado dourado (pseudo-elemento) */
+.nav-ativo::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: var(--dourado);
+}
+
+/* ========================================
+   BANNER DA HOME (parallax)
+   ======================================== */
+/* A "moldura" do banner: corta o que sair para fora dela */
+.banner {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+    background-color: var(--noite);
+}
+
+/* Camada de fundo: mais alta que o banner para sobrar imagem
+   quando ela se mover durante a rolagem */
+.banner-fundo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 140%;
+    object-fit: cover;
+}
+
+/* Camada da frente: logo e slogan centralizados */
+.banner-conteudo {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+}
+
+.banner-conteudo h1 {
+    margin: 0;
+}
+
+.banner-logo {
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+}
+
+.banner-slogan {
+    margin: 1rem 0 0;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    font-family: var(--fonte-titulo);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--neve);
+    background-color: var(--noite);
+}
+
+/* ========================================
+   PRODUTOS (grade de cards)
+   ======================================== */
+/* Grid: cria quantas colunas couberem, cada uma com no mínimo 240px */
+.grade-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.card {
+    position: relative; /* permite posicionar o selo de promoção dentro do card */
+    background-color: var(--neve);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 1rem;
+}
+
+.card-info h3 {
+    margin: 0 0 0.5rem;
+    color: var(--verde);
+}
+
+/* ========================================
+   FILTRO E BUSCA
+   ======================================== */
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+}
+
+.filtros input,
+.filtros select {
+    padding: 0.5rem;
+    border: 2px solid var(--verde);
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.filtros input:focus,
+.filtros select:focus {
+    outline: none;
+    border-color: var(--dourado);
+}
+
+#contador {
+    width: 100%;
+    margin: 0;
+    color: var(--verde);
+    font-weight: bold;
+}
+
+/* Mensagem quando nenhum produto combina com o filtro */
+.sem-resultado {
+    grid-column: 1 / -1; /* ocupa a linha inteira do grid */
+    text-align: center;
+    color: var(--vermelho);
+    font-weight: bold;
+}
+
+/* ========================================
+   BOTÕES E CARRINHO
+   ======================================== */
+.btn-comprar,
+.item-quantidade button,
+.item-carrinho > button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--neve);
+    background-color: var(--vermelho);
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-comprar:hover,
+.item-quantidade button:hover,
+.item-carrinho > button:hover {
+    background-color: var(--verde);
+    transform: scale(1.05);
+}
+
+.btn-comprar {
+    display: block;
+    width: 100%;
+    margin-top: 0.75rem;
+}
+
+/* Cada linha do carrinho */
+.item-carrinho {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 16px;
+    background-color: var(--neve);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.item-carrinho img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.item-info {
+    flex: 1;
+    min-width: 150px;
+}
+
+.item-info h3,
+.item-info p {
+    margin: 0;
+}
+
+.item-quantidade {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.carrinho-vazio {
+    padding: 1rem;
+    text-align: center;
+}
+
+.resumo-carrinho {
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 16px;
+    color: var(--neve);
+    background-color: var(--verde);
+}
+
+/* ========================================
+   PROMOÇÕES
+   ======================================== */
+/* Card em promoção: borda e brilho dourados */
+.card-promocao {
+    border: 3px solid var(--dourado);
+    box-shadow: 0 0 16px var(--dourado);
+}
+
+/* Selo "-20%" no canto da imagem, pulsando */
+.selo-promocao {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 1;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-weight: bold;
+    color: var(--neve);
+    background-color: var(--vermelho);
+    animation: pulsar 1.5s ease-in-out infinite;
+}
+
+@keyframes pulsar {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+.preco-antigo {
+    margin-right: 0.5rem;
+    opacity: 0.6;
+}
+
+.preco-promocional {
+    font-size: 1.25rem;
+    color: var(--vermelho);
+}
+
+/* ========================================
+   LISTAS DA HOME
+   ======================================== */
+.secao-home {
+    padding: 1rem;
+}
+
+.secao-home h2 {
+    margin-bottom: 0;
+    text-align: center;
+    color: var(--vermelho);
+}
+
+.secao-home > p {
+    text-align: center;
+}
+
+/* ========================================
+   BARRA DE VALOR (filtro)
+   ======================================== */
+.filtro-valor {
+    width: 100%;
+}
+
+.filtros .filtro-valor input {
+    width: 100%;
+    padding: 0;
+    border: none;
+    accent-color: var(--vermelho);
+}
+
+.limites-valor {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ========================================
+   NEVE E MÚSICA
+   ======================================== */
+/* Cada .floco cai de cima para baixo, em loop */
+@keyframes cair {
+    from { transform: translateY(-10vh); }
+    to { transform: translateY(110vh); }
+}
+
+.floco {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    color: var(--neve);
+    text-shadow: 0 0 4px var(--noite); /* contorno para aparecer também em fundo claro */
+    animation: cair 8s linear infinite;
+    pointer-events: none; /* o floco não bloqueia cliques */
+    user-select: none;
+}
+
+/* Botão de música fixo no canto da tela */
+.btn-musica {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 1001;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--dourado);
+    border-radius: 999px;
+    font-size: 1rem;
+    color: var(--neve);
+    background-color: var(--vermelho);
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-musica:hover {
+    background-color: var(--verde);
+    transform: scale(1.05);
+}
+
+/* ========================================
+   CONTAGEM REGRESSIVA E AVISO DE DESCONTO
+   ======================================== */
+.contagem {
+    margin: 1rem;
+    padding: 1.5rem 1rem;
+    border-radius: 16px;
+    text-align: center;
+    color: var(--neve);
+    background-color: var(--noite);
+}
+
+.contagem h2 {
+    margin-top: 0;
+}
+
+.relogio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.relogio div {
+    min-width: 5rem;
+    padding: 0.75rem;
+    border: 2px solid var(--dourado);
+    border-radius: 12px;
+}
+
+.relogio strong {
+    display: block;
+    font-size: 2rem;
+    color: var(--dourado);
+}
+
+.aviso-desconto {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    color: var(--noite);
+    background-color: var(--dourado);
+}
+
+.aviso-desconto p {
+    margin: 0;
+}
+
+/* ========================================
+   GALERIA E LIGHTBOX
+   ======================================== */
+.galeria {
+    padding: 1rem;
+}
+
+.galeria h2,
+.galeria > p {
+    text-align: center;
+}
+
+.galeria h2 {
+    color: var(--vermelho);
+}
+
+/* Grid: quantas colunas couberem, cada uma com no mínimo 180px */
+.grade-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.foto-galeria {
+    display: block;
+    width: 100%;
+    height: 180px;
+    border-radius: 12px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.foto-galeria:hover {
+    transform: scale(1.05);
+}
+
+/* Lightbox: cobre a tela toda; fica escondido até receber a classe "aberto" */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000; /* acima da neve e do botão de música */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: var(--neve);
+    cursor: pointer;
+}
+
+.lightbox.aberto {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 75vh;
+    border-radius: 12px;
+}
+
+.fechar-lightbox {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--neve);
+    background-color: var(--vermelho);
+    cursor: pointer;
+}
+
+/* ========================================
+   CONTATO (formulário)
+   ======================================== */
+.intro-contato {
+    text-align: center;
+}
+
+.formulario-contato {
+    max-width: 600px;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    border-radius: 16px;
+    background-color: var(--creme);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+}
+
+.campo input,
+.campo textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px solid var(--verde);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: var(--dourado);
+}
+
+/* Mensagem de erro embaixo de cada campo */
+.erro {
+    display: block;
+    min-height: 1.2rem;
+    font-size: 0.9rem;
+    color: var(--vermelho);
+}
+
+.btn-enviar {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--neve);
+    background-color: var(--vermelho);
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-enviar:hover {
+    background-color: var(--verde);
+    transform: scale(1.05);
+}
+
+/* Mensagem de sucesso */
+#mensagem-form {
+    font-weight: bold;
+    color: var(--verde);
+}
+
+/* ========================================
+   RODAPÉ
+   ======================================== */
+.rodape {
+    margin-top: 2rem;
+    padding: 1.5rem 1rem;
+    color: var(--neve);
+    background-color: var(--verde);
+}
+
+/* Os 3 blocos ficam lado a lado e quebram de linha sozinhos quando falta espaço */
+.rodape-blocos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1.5rem;
+}
+
+.rodape-bloco {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+
+.rodape h2 {
+    margin: 0 0 0.5rem;
+    color: var(--dourado);
+    font-size: 1.2rem;
+}
+
+.rodape p {
+    margin: 0.25rem 0;
+}
+
+.rodape-bloco a {
+    display: block;
+    margin: 0.25rem 0;
+    color: var(--neve);
+    text-decoration: none;
+}
+
+.rodape-bloco a:hover {
+    color: var(--dourado);
+}
+
+.rodape-direitos {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--dourado);
+    text-align: center;
+}

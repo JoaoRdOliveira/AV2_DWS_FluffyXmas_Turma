@@ -1,0 +1,52 @@
+        CRÉDITOS DE IMAGENS
+
+IMAGENS (Pixabay, Pixabay Content License):
+ - Alexas_Fotos: pixabay.com/photos/christmas-teddy-stuffed-animal-1912540/ e ...-1909126/
+ - Alexas_Fotos: pixabay.com/photos/christmas-reindeer-fun-cute-deco-2527351/
+ - Alexas_Fotos: pixabay.com/photos/santa-claus-christmas-deco-2527324/
+ - suju-foto: pixabay.com/photos/christmas-advent-teddy-teddy-bear-3852992/ e ...-3852170/
+ - suju-foto: pixabay.com/photos/teddy-bear-snowball-christmas-5729287/
+ - guvo59: pixabay.com/photos/teddy-bears-christmas-8409360/
+ - ELG21: pixabay.com/photos/christmas-gifts-teddy-bear-5744994/
+ - JillWellington: pixabay.com/photos/christmas-teddy-bear-toy-holiday-6872367/
+ - Irenna_____: pixabay.com/photos/toy-bear-christmas-gift-plush-4705798/
+ - Laney5569: pixabay.com/photos/christmas-teddy-bear-ukulele-7617511/
+ - Katrina_S: pixabay.com/photos/armchair-holidays-toys-2526977/
+ - manfredrichter: pixabay.com/photos/winter-bear-little-bear-figure-2920918/
+ - Van3ssa_: pixabay.com/photos/christmas-ornament-santa-claus-6848751/
+ - wnk1029: pixabay.com/photos/bear-christmas-ornament-holiday-2656876/
+ - eak_kkk: pixabay.com/photos/christmas-tree-1081317/
+ - garten-gg: pixabay.com/photos/christmas-gifts-christmas-tree-6794234/
+
+ IMAGENS (Pexels):
+ - https://www.pexels.com/photo/a-christmas-reindeer-stuffed-toy-decoration-19054427/
+ - https://www.pexels.com/photo/rudolph-plush-toy-1591237/
+ - https://www.pexels.com/photo/reindeer-stuffed-toys-and-red-christmas-balls-13464155/
+ - https://www.pexels.com/photo/teddy-toys-of-christmas-bears-19599235/
+ - https://www.pexels.com/photo/christmas-ornaments-in-close-up-photography-14668455/
+ - https://www.pexels.com/photo/colorful-christmas-ornaments-at-festive-market-29820833/
+ - https://www.pexels.com/photo/horse-decoration-on-christmas-tree-14704900/
+ - https://www.pexels.com/pt-br/foto/urso-de-pelucia-aconchegante-perto-da-arvore-de-natal-34967760/
+ - https://www.pexels.com/pt-br/foto/carro-veiculo-automovel-natal-19213923/
+ - https://www.pexels.com/pt-br/foto/enfeites-aderecos-acessorios-arvore-de-natal-10633319/
+ - https://www.pexels.com/pt-br/foto/arvore-de-natal-festivamente-decorada-com-luzes-35036735/
+ - https://www.pexels.com/pt-br/foto/coracao-natal-enfeites-aderecos-15297645/
+ - https://www.pexels.com/pt-br/foto/arvore-de-natal-festiva-com-enfeites-de-papai-noel-35425950/
+ - https://www.pexels.com/pt-br/foto/vermelho-natal-suspensao-pendurado-19304383/
+ - https://www.pexels.com/pt-br/foto/guirlanda-de-natal-festiva-com-decoracao-de-boneco-de-neve-31369661/
+ - https://www.pexels.com/pt-br/foto/arvores-de-natal-ceramicas-com-recortes-em-estrela-35463140/
+ - https://www.pexels.com/pt-br/foto/pessoa-feriado-natal-celebracao-19419851/
+ - https://www.pexels.com/pt-br/foto/exposicao-de-soldados-quebra-nozes-de-madeira-tradicionais-34629232/
+ - https://www.pexels.com/pt-br/foto/natal-decoracao-de-natal-decoracao-natalina-yuletide-14924404/
+ - https://www.pexels.com/pt-br/foto/exibicao-festiva-de-globos-de-neve-e-enfeites-de-natal-29820836/
+ - https://www.pexels.com/pt-br/foto/suspensao-pendurado-enfeites-aderecos-10642233/
+ - https://www.pexels.com/pt-br/foto/sinos-e-decoracoes-natalinas-festivas-em-kochi-35200371/
+ - https://www.pexels.com/pt-br/foto/foto-de-angulo-baixo-da-estrela-iluminada-no-topo-de-uma-arvore-de-natal-3303616/
+ - https://www.pexels.com/pt-br/foto/arvore-de-natal-decorada-com-bolas-14586199/
+ - https://www.pexels.com/pt-br/foto/sapatos-calcados-natal-suspensao-19304469/
+ - https://www.pexels.com/pt-br/foto/decoracao-de-suspensao-de-unicornio-branco-e-marrom-756684/
+ - https://www.pexels.com/pt-br/foto/enfeites-para-arvores-de-natal-em-nigde-turquia-35462374/
+ - https://www.pexels.com/pt-br/foto/arvore-de-natal-iluminada-em-verde-e-dourado-724375/
+ - https://www.pexels.com/pt-br/foto/decoracao-natal-pinhas-enfeites-de-natal-14735359/
+ - https://www.pexels.com/pt-br/foto/enfeites-de-natal-festivos-em-ramo-de-arvore-35317287/
+ - https://www.pexels.com/pt-br/foto/cena-aconchegante-de-decoracao-natalina-feliz-natal-35227482/
