@@ -1,15 +1,23 @@
-        EQUIPE - 1° TiC
+LOJA: Nome da Loja
+SEGMENTO: Pelúcias e Decorações Menores
+TURMA: 1TIC
+
+        EQUIPE
 
 João Vitor
 Maria Clara
 
         RECURSOS UTILIZADOS
 
-Pixabay
-Pexels
-VsCode
-Claude
-Gemini
+Parallax - Index
+Cards - Produtos
+Sons - Todas
+Filtos - produtos
+Validação de Formulário - Contato
+Lightbox - Galeria
+Timer até o Natal - Galeria
+Neve caindo - Todas
+...
 
         LINKS
 
