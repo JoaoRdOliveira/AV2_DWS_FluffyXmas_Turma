@@ -1,3 +1,22 @@
+        EQUIPE - 1° TiC
+
+João Vitor
+Maria Clara
+
+        RECURSOS UTILIZADOS
+
+Pixabay
+Pexels
+VsCode
+Claude
+Gemini
+
+        LINKS
+
+Vídeo: https://youtu.be/cFxST9UY22Y
+Site: https://joaordoliveira.github.io/AV2_DWS_FluffyXmas_Turma/
+Repositório: https://github.com/JoaoRdOliveira/AV2_DWS_FluffyXmas_Turma
+
         CRÉDITOS DE IMAGENS
 
 IMAGENS (Pixabay, Pixabay Content License):
